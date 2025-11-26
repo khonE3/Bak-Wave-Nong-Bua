@@ -1,8 +1,8 @@
 {
   "version": 2,
   "framework": null,
-  "installCommand": "npm install",
-  "buildCommand": "npx nuxt prepare && npm run generate",
+  "installCommand": "npm install --ignore-scripts",
+  "buildCommand": "npm run generate",
   "outputDirectory": ".output/public",
   "cleanUrls": true,
   "trailingSlash": false

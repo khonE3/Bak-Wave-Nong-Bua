@@ -6,8 +6,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "node -e \"if(process.env.VERCEL)process.exit(0)\" || nuxt prepare"
+    "preview": "nuxt preview"
   },
   "devDependencies": {
     "@nuxt/devtools": "^2.3.0",
