@@ -83,7 +83,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/476cee40-b3f5-4db4-8b96-bdd05ea8b6c4"
+        "./manifest/meta/dev.json"
       ],
       "#components": [
         "./components"
@@ -136,6 +136,7 @@
     "../layers/*/*.d.ts"
   ],
   "exclude": [
+    "../../node_modules",
     "../dist",
     "../.data",
     "../modules/*/runtime/server/**/*",
@@ -151,7 +152,7 @@
     "../node_modules/dist/runtime/server",
     "../node_modules/*.*",
     "../node_modules/dist/*.*",
-    "../.output",
+    "dev",
     "../server"
   ]
 }
