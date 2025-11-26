@@ -1360,7 +1360,7 @@ const _TXkUlsxs0nMNyoNlaH6RaWwbwRMiZ31Al5HS53yOxtM = (function(nitro) {
 
 const rootDir = "D:/Git Clone/Bak-Wave-Nong-Bua/frontend";
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"},{"name":"theme-color","content":"#FF69B4"},{"name":"description","content":"แอปเกรียนเวฟ ธีมอีสานสีชมพู"}],"link":[{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":""},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap"}],"style":[],"script":[],"noscript":[],"title":"เกรียนเวฟ App","htmlAttrs":{"lang":"th"}};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"},{"name":"theme-color","content":"#FF69B4"},{"name":"description","content":"แอปเกรียนเวฟ ธีมอีสานสีชมพู"}],"link":[{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":""},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700&display=swap"}],"style":[],"script":[],"noscript":[],"title":"🌾 เกรียนเวฟ App 🐃","htmlAttrs":{"lang":"th"}};
 
 const appRootTag = "div";
 

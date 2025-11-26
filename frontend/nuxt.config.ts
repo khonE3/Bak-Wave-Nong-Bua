@@ -17,7 +17,7 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/',
     head: {
-      title: 'เกรียนเวฟ App',
+      title: '🌾 เกรียนเวฟ App 🐃',
       htmlAttrs: {
         lang: 'th'
       },
