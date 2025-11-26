@@ -1,8 +1,5 @@
 {
   "installCommand": "npm install --ignore-scripts && node node_modules/nuxt/bin/nuxt.mjs prepare",
   "buildCommand": "node node_modules/nuxt/bin/nuxt.mjs generate",
-  "outputDirectory": ".output/public",
-  "rewrites": [
-    { "source": "/((?!_nuxt|assets|favicon).*)", "destination": "/index.html" }
-  ]
+  "outputDirectory": ".output/public"
 }
