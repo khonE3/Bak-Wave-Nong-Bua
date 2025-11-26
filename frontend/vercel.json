@@ -1,6 +1,6 @@
 {
-  "buildCommand": "npm run generate",
+  "buildCommand": "npx nuxt prepare && npm run generate",
   "outputDirectory": ".output/public",
   "framework": "nuxtjs",
-  "installCommand": "npm install"
+  "installCommand": "npm install --ignore-scripts"
 }
