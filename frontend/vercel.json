@@ -1,5 +1,5 @@
 {
-  "installCommand": "npm install --ignore-scripts",
-  "buildCommand": "npx nuxt prepare && npx nuxt generate",
+  "installCommand": "npm install --ignore-scripts && node node_modules/nuxt/bin/nuxt.mjs prepare",
+  "buildCommand": "node node_modules/nuxt/bin/nuxt.mjs generate",
   "outputDirectory": ".output/public"
 }
