@@ -1,5 +1,9 @@
 {
-  "installCommand": "npm install --ignore-scripts && node node_modules/nuxt/bin/nuxt.mjs prepare",
-  "buildCommand": "node node_modules/nuxt/bin/nuxt.mjs generate",
-  "outputDirectory": ".output/public"
+  "version": 2,
+  "framework": null,
+  "installCommand": "npm install",
+  "buildCommand": "npm run generate",
+  "outputDirectory": ".output/public",
+  "cleanUrls": true,
+  "trailingSlash": false
 }

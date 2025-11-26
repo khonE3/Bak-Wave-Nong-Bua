@@ -9,6 +9,10 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4
   },
+
+  nitro: {
+    preset: 'static'
+  },
   
   app: {
     baseURL: '/',

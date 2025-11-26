@@ -89,7 +89,103 @@ const messages = [
 
 const emojis = ['🌾', '🐃', '🌸', '🪭', '🥁', '🌺', '🎵', '🎉', '💃', '🕺', '🦎', '🍚']
 
+// 🎵 Isan Sound Effects using Web Audio API
+let audioContext: AudioContext | null = null
+
+const initAudio = () => {
+  if (!audioContext) {
+    audioContext = new (window.AudioContext || (window as any).webkitAudioContext)()
+  }
+  return audioContext
+}
+
+// เสียงพิณอีสาน (Isan Phin sound)
+const playIsanSound = () => {
+  const ctx = initAudio()
+  if (!ctx) return
+
+  const now = ctx.currentTime
+
+  // สุ่มเสียงแบบอีสาน
+  const sounds = [
+    () => playPhinSound(ctx, now),      // เสียงพิณ
+    () => playKhaenSound(ctx, now),     // เสียงแคน
+    () => playPongLangSound(ctx, now),  // เสียงโปงลาง
+  ]
+  
+  sounds[Math.floor(Math.random() * sounds.length)]()
+}
+
+// เสียงพิณ (Phin - Isan lute)
+const playPhinSound = (ctx: AudioContext, now: number) => {
+  const notes = [329.63, 392, 440, 523.25] // E4, G4, A4, C5
+  const note = notes[Math.floor(Math.random() * notes.length)]
+  
+  const osc = ctx.createOscillator()
+  const gain = ctx.createGain()
+  
+  osc.type = 'triangle'
+  osc.frequency.setValueAtTime(note, now)
+  osc.frequency.exponentialRampToValueAtTime(note * 1.02, now + 0.1)
+  
+  gain.gain.setValueAtTime(0.4, now)
+  gain.gain.exponentialRampToValueAtTime(0.01, now + 0.5)
+  
+  osc.connect(gain)
+  gain.connect(ctx.destination)
+  
+  osc.start(now)
+  osc.stop(now + 0.5)
+}
+
+// เสียงแคน (Khaen - bamboo mouth organ)
+const playKhaenSound = (ctx: AudioContext, now: number) => {
+  const baseFreq = 220 + Math.random() * 110 // A3-A4
+  
+  for (let i = 0; i < 3; i++) {
+    const osc = ctx.createOscillator()
+    const gain = ctx.createGain()
+    
+    osc.type = 'sine'
+    osc.frequency.setValueAtTime(baseFreq * (i + 1), now)
+    
+    gain.gain.setValueAtTime(0.2 / (i + 1), now)
+    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4)
+    
+    osc.connect(gain)
+    gain.connect(ctx.destination)
+    
+    osc.start(now)
+    osc.stop(now + 0.4)
+  }
+}
+
+// เสียงโปงลาง (Pong Lang - wooden xylophone)
+const playPongLangSound = (ctx: AudioContext, now: number) => {
+  const notes = [523.25, 587.33, 659.25, 783.99] // C5, D5, E5, G5
+  
+  notes.slice(0, 2 + Math.floor(Math.random() * 2)).forEach((note, i) => {
+    const osc = ctx.createOscillator()
+    const gain = ctx.createGain()
+    
+    osc.type = 'square'
+    osc.frequency.setValueAtTime(note, now + i * 0.08)
+    
+    gain.gain.setValueAtTime(0, now + i * 0.08)
+    gain.gain.linearRampToValueAtTime(0.25, now + i * 0.08 + 0.02)
+    gain.gain.exponentialRampToValueAtTime(0.01, now + i * 0.08 + 0.2)
+    
+    osc.connect(gain)
+    gain.connect(ctx.destination)
+    
+    osc.start(now + i * 0.08)
+    osc.stop(now + i * 0.08 + 0.25)
+  })
+}
+
 const teaseWave = async () => {
+  // 🎵 Play Isan sound!
+  playIsanSound()
   // Shake animation
   isShaking.value = true
   setTimeout(() => {

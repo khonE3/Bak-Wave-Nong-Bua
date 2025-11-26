@@ -1,0 +1,1 @@
+.popup-enter-active[data-v-babd7339]{animation:pop-in .5s cubic-bezier(.68,-.55,.265,1.55)}.popup-leave-active[data-v-babd7339]{animation:pop-out-babd7339 .3s ease-out}@keyframes pop-out-babd7339{0%{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(.5)}}.border-3[data-v-babd7339]{border-width:3px}
