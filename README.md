@@ -3,13 +3,13 @@
 Mobile Web App สำหรับเกรียนคนชื่อเวฟ ธีมสีชมพูอีสานพื้นบ้าน!
 
 ## Tech Stack
-- **Frontend**: Nuxt 3 + TailwindCSS
+- **Frontend**: Nuxt  + TailwindCSS
 - **Backend**: Gin (Go)
 - **Mobile**: Capacitor
 
 ## วิธีรันโปรเจค
 
-### Frontend (Nuxt 3)
+### Frontend (Nuxt)
 
 ```bash
 cd frontend
